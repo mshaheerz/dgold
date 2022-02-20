@@ -40,6 +40,10 @@ def logout():
 def admins():
     return render_template("admin/admins.html")
 
+@app.route("/leaveRequest")
+def leaveRequest():
+    return render_template("employee/leaveRequest.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
