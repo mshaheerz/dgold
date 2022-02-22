@@ -7,34 +7,20 @@
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="/GetaddEmployee">
+<form id="form1" name="form1" method="post" action="/GettargetEmployees">
 
   <div class="row">
     <div class="col-md-6 m-auto">
         <div class="container mt-5 pl-5">
-<h2 class="text-center font-weight-bold">Add Employee</h2>
+<h2 class="text-center font-weight-bold">Set {{val[1]}} Target</h2>
                 <div class="form-group">
-                    <label for="" class="font-weight-bold">employee name</label>
-                    <input type="text" class="form-control"  name="ename" id="" aria-describedby="emailHelp"
-                        placeholder="Enter name">
+                    <br><br><br>
+                    <input type="number" class="form-control"  name="number"
+                        placeholder="Enter Target">
                 </div>
 
 
-
-                <div class="form-group">
-                    <label for="" class="font-weight-bold">e-code</label>
-                    <input type="text" class="form-control" name="ecode" id="" placeholder="ecode">
-                </div>
-
- <label for="" class="font-weight-bold">Branch</label>
-                 <select class="form-select" aria-label="Default select example" name="branch">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-
-                <button type="submit" class="btn btn-primary float-right">add</button>
+                <button type="submit" class="btn btn-primary float-right">Set</button>
             </form>
         </div>
     </div>

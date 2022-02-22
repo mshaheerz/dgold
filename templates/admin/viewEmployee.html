@@ -7,34 +7,22 @@
 </head>
 
 <body>
-<form id="form1" name="form1" method="post" action="/getLogin">
-
-  <div class="row">
-    <div class="col-md-6 m-auto">
-        <div class="container mt-5 pl-5">
-            <h2 class="text-center font-weight-bold">LOGIN</h2>
-            <form action="/login" method="POST">
-
-            <p class="error text-danger"></p>
-
-                <div class="form-group">
-                    <label class="font-weight-bold">UserName</label>
-                    <input type="text" class="form-control"  name="uname"
-                        placeholder="Enter name">
-                </div>
-
-            <p class="error text-danger"></p>
-
-                <div class="form-group">
-                    <label class="font-weight-bold">Password</label>
-                    <input type="password" class="form-control" name="pwd"  placeholder="Password">
-                </div>
-                <a href="/signup">Create New Account?</a>
-                <button type="submit" name="submit" class="btn btn-primary float-right">Submit</button>
-            </form>
-        </div>
-    </div>
-</form>
+<div >
+  <table class="table mt-5">
+    <tr>
+      <th scope="col">Employee Name </th>
+      <th scope="col">E-code</th>
+      <th scope="col">Branch </th>
+    </tr>
+     {% for i in val%}
+    <tr>
+      <td>&nbsp;{{i[1]}}</td>
+      <td>&nbsp;{{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+    </tr>
+     {% endfor %}
+  </table>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
