@@ -10,31 +10,32 @@
 </head>
 
 <body>
-
-
+<div class="row">
+  <div class="col-md-12 ">
+        <div class="container ">
+<h2 class="text-center mt-5 pl-3 font-weight-bold" style="font-weight: bold">Target</h2>
   <table class="table mt-5">
     <tr>
 
       <th scope="col">Employee name </th>
       <th scope="col">Ecode</th>
       <th scope="col">branch</th>
-      <th scope="col">reason</th>
     </tr>
     {% for i in val%}
     <tr>
-      <td>&nbsp;{{i[1]}}</td>
-      <td>&nbsp;{{i[2]}}</td>
-      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
       <td>&nbsp;{{i[6]}}</td>
+      <td>&nbsp;{{i[7]}}</td>
       <td>
-        <a href="/rejectReaqusetEmployee?id={{i[5]}}" onclick="return confirm('Are you sure?') "  class="btn btn-danger">reject</a>
-      <a href="/AcceptReaqusetEmployee?id={{i[5]}}" onclick="return confirm('Are you sure?') " class="btn btn-primary">accept</a>
+      <a href="/SettargetEmployees?id={{i[4]}}"  class="btn btn-primary">Set Target</a>
       </td>
     </tr>
     {% endfor %}
   </table>
   </div>
-
+</div>
+    </div>
+    </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
